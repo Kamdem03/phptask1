@@ -1,4 +1,4 @@
-<?php dexlare(strict_types=1)
+<?Php
  // sum function between two numbers
 
  function sum(int $a, int $b){
@@ -10,7 +10,7 @@
  //difference between two numbers
 
  function diff(int $a, int $b){
-    $difference = $a - $b;
+    $diff = $a - $b;
     return $diff;
  }
  echo "10 - 3 =" .diff(10,3) ."<br>";
@@ -18,12 +18,12 @@
  //division of two numbers
   
  function div(int $a, int $b){
-    $divison = $a / $b;
-    retun $div;
+    $div = $a / $b;
+    return $div;
  }
- echo "100 / 25 =" .div(100,25) ."<br>"
+ echo "100 / 25 =" .div(100,25) ."<br>";
 
- //multoplication of two numbers
+ //multiplication of two numbers
 
  function mul(int $a, int $b){
     $mul = $a * $b;
@@ -37,13 +37,14 @@
     $mod = $a % $b;
     return $mod;
  }
- echo "15 % 2 = " .mod(15,2) ."<br>"
+ echo "15 % 2 = " .mod(15,2) ."<br>";
 
  //Basic Hash function
 
- function hash(string $message){
+ function pass(string $message){
    $message ="Highway";
-   echo md5($mesage);
+   $md5pass = md5( $message);
+   echo md5($message);
  }
 
 ?>
