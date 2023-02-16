@@ -38,4 +38,12 @@
     return $mod;
  }
  echo "15 % 2 = " .mod(15,2) ."<br>"
+
+ //Basic Hash function
+
+ function hash(string $message){
+   $message ="Highway";
+   echo md5($mesage);
+ }
+
 ?>
