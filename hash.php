@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+"<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -15,7 +15,7 @@
     <?php
      $pass1 =$_POST['pass'];
      $pass = md5($pass1);
-     echo $pass;
+     echo $pass; 
     ?>
 </body>
 </html>
