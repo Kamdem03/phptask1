@@ -24,7 +24,7 @@
 
    </select> <br></br>
 
-   <input type ="submit"  name="Submit">
+   <input type ="submit"  name="Submit"><br></br>
    
    </form>
 
@@ -44,7 +44,7 @@
          return $minus;
          break;
 
-         case "Multiplicatoon";
+         case "Multiplication";
          $mul = $a * $b;
          return $mul;
          break;
@@ -64,7 +64,7 @@
       }
    
    }
-         echo "The result is" .compute();
+         echo "The result is " .compute();
    ?>
 
 </body>
