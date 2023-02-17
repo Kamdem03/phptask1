@@ -1,50 +1,71 @@
-<?Php
- // sum function between two numbers
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Arithmetic operation in php</title>
+</head>
+<body>
+   <form action="" method = "post">
 
- function sum(int $a, int $b){
-    $sum = $a + $b;
-    return $sum;
- }
- echo "5 + 4 =".sum(5,4)."<br>";
+   Enter frst number:<input type ="text" name ="num1" required/><br></br>
+   Enter second number:<input type ="text" name ="num2" required/><br></br>
 
- //difference between two numbers
+   <label for="operator">Select an operation:</label>
 
- function diff(int $a, int $b){
-    $diff = $a - $b;
-    return $diff;
- }
- echo "10 - 3 =" .diff(10,3) ."<br>";
+   <select name="dropdown">
 
- //division of two numbers
-  
- function div(int $a, int $b){
-    $div = $a / $b;
-    return $div;
- }
- echo "100 / 25 =" .div(100,25) ."<br>";
+      <option value="Addition">Addition</option>
+      <option value="Substraction">Substraction</option>
+      <option value="Multiplication">Multiplication</option>
+      <option value="Division">Division</option>
+      <option value="Modulus">Modulus</option>
 
- //multiplication of two numbers
+   </select> <br></br>
 
- function mul(int $a, int $b){
-    $mul = $a * $b;
-    return $mul;
- }
- echo "20 * 5 =" .mul(20,5) ."<br>";
+   <input type ="submit"  name="Submit">
+   
+   </form>
 
- //modulus of two numbers
+   <?php
+   function compute(){
+      $a = $_POST['num1'];
+      $b = $_POST['num2'];
 
- function mod(float $a, float $b){
-    $mod = $a % $b;
-    return $mod;
- }
- echo "15 % 2 = " .mod(15,2) ."<br>";
+      switch($_POST['dropdown']){
+         case "Addition";
+         $sum = $a + $b;
+         return $sum;
+         break;
 
- //Basic Hash function
+         case "Substraction";
+         $minus = $a - $b;
+         return $minus;
+         break;
 
- function pass(string $message){
-   $message ="Highway";
-   $md5pass = md5( $message);
-   echo md5($message);
- }
+         case "Multiplicatoon";
+         $mul = $a * $b;
+         return $mul;
+         break;
 
-?>
+         case "Division";
+         $div = $a / $b;
+         return $div;
+         break;
+
+         case "Modulus";
+         $mod = $a % $b;
+         return $mod;
+         break;
+
+         default:
+            echo  "invalid Operation";
+      }
+   
+   }
+         echo "The result is" .compute();
+   ?>
+
+</body>
+</html>
