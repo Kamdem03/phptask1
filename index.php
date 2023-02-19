@@ -29,13 +29,19 @@
    </form>
 
    <?php
+   function add($a, $b){
+      return $a + $b;
+   }
+   function multiply($a, $b){
+      return $a * $b;
+   }
    function compute(){
       $a = $_POST['num1'];
       $b = $_POST['num2'];
 
       switch($_POST['dropdown']){
          case "Addition";
-         $sum = $a + $b;
+         $sum = add($a, $b);
          return $sum;
          break;
 
@@ -55,7 +61,7 @@
          break;
 
          case "Modulus";
-         $mod = $a % $b;
+         $mod = multiply($a, $b)
          return $mod;
          break;
 
